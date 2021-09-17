@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import the data from data.js
 const tableData = data;
 // Reference the HTML table using d3
@@ -18,3 +19,22 @@ function buildTable(data) {
 		});
 	});
 }
+
+function handleClick() {
+	// grab datetime value from filter
+	let date = d3.select('#datetime').property('value');
+
+	// check to see if a date was entered and filter the data
+	let filteredData = tableData;
+	if (date) {
+		filteredData = filteredData.filter(row => row.datetime === date);
+	}
+
+	// rebuild the table with the filtered data
+	buildTable(filteredData);
+}
+// use d3 to assign handleClick as the filter handler
+d3.selectAll('#filter-btn').on('click', handleClick);
+
+// build initial table for webpage
+buildTable(tableData);
