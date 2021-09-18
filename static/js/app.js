@@ -17,9 +17,8 @@ function buildTable(data) {
 			let cell = row.append('td');
 			cell.text(val);
 		});
-	});
+	});  
 }
-
 function handleClick() {
 	// grab datetime value from filter
 	let date = d3.select('#datetime').property('value');
