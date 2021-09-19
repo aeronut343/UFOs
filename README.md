@@ -13,4 +13,4 @@ The filters take effect one at a time after either clicking away from the input 
 ## Summary
 While the webpage is functional and has some basic styling added, it could use some improvements.
 - Display the article title on top of the article instead of to the side, to use up less unnecessary space
-- Add 'clear' buttons next to each filter and a 'clear all' button next to the filters header for ease of use
+- Add 'clear' buttons next to each filter and a 'clear all' button next to 'Filter Search' for ease of use
